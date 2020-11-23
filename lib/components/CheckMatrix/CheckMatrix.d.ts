@@ -9,7 +9,7 @@ declare const CheckMatrix_base: any;
  * @constructor
  */
 export default class CheckMatrix extends CheckMatrix_base {
-    checks: Array<Array<any>>;
+    checks: any[][];
     constructor(component: any, options: any, data: any);
     static schema(): any;
     static editForm: typeof editForm;
