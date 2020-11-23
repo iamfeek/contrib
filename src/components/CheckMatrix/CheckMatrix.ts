@@ -16,7 +16,7 @@ import editForm from './CheckMatrix.form';
  * @constructor
  */
 export default class CheckMatrix extends (FieldComponent as any) {
-  public checks: Array<Array<any>>;
+  public checks: any[][];
   constructor(component, options, data) {
     super(component, options, data);
     this.checks = [];
@@ -108,12 +108,12 @@ export default class CheckMatrix extends (FieldComponent as any) {
    * @returns {Array}
    */
   getValue() {
-    var value = [];
-    for (var rowIndex in this.checks) {
-      var row = this.checks[rowIndex];
+    const value = [];
+    for (const rowIndex in this.checks) {
+      const row = this.checks[rowIndex];
       value[rowIndex] = [];
-      for (var colIndex in row) {
-        var col = row[colIndex];
+      for (const colIndex in row) {
+        const col = row[colIndex];
         value[rowIndex][colIndex] = !!col.checked;
       }
     }
@@ -130,17 +130,17 @@ export default class CheckMatrix extends (FieldComponent as any) {
     if (!value) {
       return;
     }
-    for (var rowIndex in this.checks) {
-      var row = this.checks[rowIndex];
+    for (const rowIndex in this.checks) {
+      const row = this.checks[rowIndex];
       if (!value[rowIndex]) {
         break;
       }
-      for (var colIndex in row) {
-        var col = row[colIndex];
+      for (const colIndex in row) {
+        const col = row[colIndex];
         if (!value[rowIndex][colIndex]) {
           return false;
         }
-        let checked = value[rowIndex][colIndex] ? 1 : 0;
+        const checked = value[rowIndex][colIndex] ? 1 : 0;
         col.value = checked;
         col.checked = checked;
       }
