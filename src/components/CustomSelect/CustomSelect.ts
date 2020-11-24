@@ -25,10 +25,20 @@ export default class CustomSelect extends (FieldComponent as any) {
     schema: CustomSelect.schema()
   }
 
-  public render(children) {
-    return super.render(
-      this.renderTemplate('customselect')
-    )
+  public render() {
+    // @ts-ignore
+    return FieldComponent.prototype.render.call(this, this.renderTemplate('selectboxes', {
+      // @ts-ignore
+      input: this.inputInfo,
+      // @ts-ignore
+      inline: this.component.inline,
+      // @ts-ignore
+      values: this.component.values,
+      // @ts-ignore
+      value: this.dataValue,
+      // @ts-ignore
+      row: this.row,
+    }));
   }
 
   attach(element) {

@@ -12,7 +12,7 @@ export default class CustomSelect extends CustomSelect_base {
         documentation: string;
         schema: any;
     };
-    render(children: any): any;
+    render(): any;
     attach(element: any): any;
 }
 export {};

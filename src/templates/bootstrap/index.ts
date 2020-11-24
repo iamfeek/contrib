@@ -1,7 +1,7 @@
 import checkmatrix from './checkmatrix';
-import customselect from './customselect';
+import selectboxes from './selectboxes';
 
 export default {
   checkmatrix,
-  customselect
+  selectboxes
 };

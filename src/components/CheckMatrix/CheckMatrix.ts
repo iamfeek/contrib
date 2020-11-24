@@ -52,16 +52,17 @@ export default class CheckMatrix extends (FieldComponent as any) {
   }
 
   renderCell(row, col) {
-    return this.renderTemplate('input', {
-      input: {
-        type: 'input',
-        ref: `${this.component.key}-${row}`,
-        attr: {
-          id: `${this.component.key}-${row}-${col}`,
-          class: 'form-control',
-          type: 'checkbox',
+    return this.renderTemplate('radio', {
+      values: [
+        {
+          label: 'First Value',
+          value: 'first',
+        },
+        {
+          label: 'Second Value',
+          value: 'second',
         }
-      }
+      ]
     });
   }
 

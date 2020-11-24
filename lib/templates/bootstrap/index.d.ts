@@ -2,7 +2,7 @@ declare const _default: {
     checkmatrix: {
         form: string;
     };
-    customselect: {
+    selectboxes: {
         form: string;
     };
 };
