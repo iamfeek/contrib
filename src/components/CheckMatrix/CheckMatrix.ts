@@ -34,7 +34,7 @@ export default class CheckMatrix extends (FieldComponent as any) {
 
   static builderInfo = {
     title: 'Check Matrix',
-    group: 'basic',
+    group: 'advanced',
     icon: 'fa fa-table',
     weight: 70,
     documentation: 'http://help.form.io/userguide/#table',
