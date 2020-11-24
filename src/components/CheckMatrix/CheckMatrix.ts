@@ -25,8 +25,8 @@ export default class CheckMatrix extends (FieldComponent as any) {
   static schema() {
     return FieldComponent.schema({
       type: 'checkmatrix',
-      numRows: 3,
-      numCols: 3
+      numRows: 4,
+      numCols: 4
     });
   }
 
