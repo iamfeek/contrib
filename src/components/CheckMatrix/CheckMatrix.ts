@@ -25,8 +25,8 @@ export default class CheckMatrix extends (FieldComponent as any) {
   static schema() {
     return FieldComponent.schema({
       type: 'checkmatrix',
-      numRows: 4,
-      numCols: 4
+      numRows: 3,
+      numCols: 3
     });
   }
 
@@ -34,7 +34,7 @@ export default class CheckMatrix extends (FieldComponent as any) {
 
   static builderInfo = {
     title: 'Check Matrix',
-    group: 'advanced',
+    group: 'basic',
     icon: 'fa fa-table',
     weight: 70,
     documentation: 'http://help.form.io/userguide/#table',
