@@ -1,8 +1,8 @@
 export default [
-    {
+  {
     key: 'multiple',
     ignore: true
-  }, 
+  },
   {
     type: 'datagrid',
     input: true,
@@ -39,7 +39,7 @@ export default [
       label: 'Description',
       key: 'description',
       input: true,
-      type: 'textfield'
+      type: 'textarea'
     }
-  ]
+    ]
   }]
