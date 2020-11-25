@@ -13,6 +13,5 @@ module.exports = {
   performance: { hints: false },
   externals: {
     formiojs: 'Formio'
-  },
-  watch: true
+  }
 };

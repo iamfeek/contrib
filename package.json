@@ -11,10 +11,10 @@
     "webpack:dev": "webpack",
     "webpack:prod": "webpack --config webpack.prod.js",
     "webpack:use": "webpack --config webpack.use.js",
-    "webpack": "npm run webpack:dev && npm run webpack:prod && npm run webpack:use",
-    "build": "tsc && gulp templates && npm run webpack && node-sass ./src/sass/contrib.scss ./dist/formio-contrib.css",
+    "webpack": "yarn webpack:dev && yarn webpack:prod && yarn webpack:use",
+    "build": "rimraf dist && tsc && gulp templates && yarn webpack && node-sass ./src/sass/contrib.scss ./dist/formio-contrib.css",
     "lint": "tslint -p .",
-    "prepublish": "npm run build"
+    "prepublish": "yarn build"
   },
   "pre-commit": [
     "lint",
@@ -56,6 +56,7 @@
     "node-sass": "^4.13.1",
     "nyc": "^15.0.1",
     "pre-commit": "^1.2.2",
+    "rimraf": "^3.0.2",
     "sinon": "^9.0.2",
     "ts-node": "^8.9.0",
     "ts-sinon": "^1.2.0",
