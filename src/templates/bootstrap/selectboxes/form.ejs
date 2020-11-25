@@ -11,17 +11,19 @@
             </ul>
         </div>
        <div class="checkbox-panel-checkbox">
-            <{{ctx.input.type}}
-            ref="input"
-            {% for (var attr in ctx.input.attr) { %}
-            {{attr}}="{{ctx.input.attr[attr]}} {% if (attr==='class') { %} govuk-checkboxes__input {% } %}"
-            {% } %}
-            value="{{item.value}}"
-            {% if (ctx.value === item.value || (typeof ctx.value === 'object' && ctx.value.hasOwnProperty(item.value) && ctx.value[item.value])) { %}
-            checked=true
-            {% } %}
-            id="{{ctx.id}}{{ctx.row}}-{{item.value}}"
-            >
+            <span class="checkbox-icon">
+                <{{ctx.input.type}}
+                ref="input"
+                {% for (var attr in ctx.input.attr) { %}
+                {{attr}}="{{ctx.input.attr[attr]}} {% if (attr==='class') { %} govuk-checkboxes__input {% } %}"
+                {% } %}
+                value="{{item.value}}"
+                {% if (ctx.value === item.value || (typeof ctx.value === 'object' && ctx.value.hasOwnProperty(item.value) && ctx.value[item.value])) { %}
+                checked=true
+                {% } %}
+                id="{{ctx.id}}{{ctx.row}}-{{item.value}}"
+                >
+            </span>
        </div>
     </div>
     {% }) %}
